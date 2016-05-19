@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="exampleapp">
+<head>
+    <meta charset="UTF-8">
+    <title>My Frontend project</title>
+</head>
+<body>
+<h1>Whou !!!</h1>
+<hero name="Flash"></hero>
+
+<script src="angular.js"></script>
+<script>
+    angular.module('exampleapp', [])
+        .component('hero', {
+            template : '<div>A super component for {{ $ctrl.name }} !</div>',
+            bindings: { name: '@'}
+        });
+</script>
+</body>
+</html>
